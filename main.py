@@ -1,4 +1,60 @@
 import random
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
 
 
 word_list = ["dog", "pencil", "baboon"]
@@ -14,18 +70,25 @@ print(display)
 
 
 while display != letter_list:
+    y = "yes"
+    n = "no"
     user_input = input(f"Guess a letter:\n").lower()
+    confirm = input("Are you sure you want to use this letter? y/n ")
+    if confirm == y:
+        continue
+    else:
+        user_input
         
     for position in range(word_lenght):
         letter = chosen_word[position]
         if letter == user_input:
             display[position] = letter
- 
-    if not display == display:
-        break
+    
+
+        
+    # if not display == display:
+    #     break
     print(display)
-    print("win")
+    
+    
 
-  
-
-       
