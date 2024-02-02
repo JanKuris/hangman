@@ -74,25 +74,25 @@ while display != letter_list:
     user_input = input(f"Guess a letter:\n").lower()  
 
     confirm = input("Are you sure you want to use this letter? y/n ").lower()
-    if confirm == "y":
-        continue
-    elif confirm == "n":
-        user_input
-    else:
-        print(f"Invalid input. Please put 'y' or 'n' {confirm}")
+    for i in confirm:
+      if confirm == "y":
+          user_input
+      elif confirm == "n":
+          continue
+      else:
+          print(f"Invalid input. Please put 'y' or 'n' {confirm}")
 
  
         
-        for position in range(word_lenght):
-          letter = chosen_word[position]
+      for position in range(word_lenght):
+        letter = chosen_word[position]
         if letter == user_input:
             display[position] = letter
-    
+    print(display) 
 
         
-    # if not display == display:
-    #     break
-    print(display)
+    
+            
     
     
 
