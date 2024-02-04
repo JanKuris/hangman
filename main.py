@@ -24,14 +24,14 @@ while not end_of_game:
 
     clear()
 
-    # confirm = input("Are you sure you want to use this letter? y/n ").lower()
-    # for i in confirm:
-    #   if confirm == "y":
-    #       user_input
-    #   elif confirm == "n":
-    #       continue
-    #   else:
-    #       print(f"Invalid input. Please put 'y' or 'n' {confirm}")
+    confirm = input("Are you sure you want to use this letter? y/n ").lower()
+    for i in confirm:
+      if confirm == "y":
+          user_input
+      elif confirm == "n":
+          continue
+      else:
+          print(f"Invalid input. Please put 'y' or 'n' {confirm}")
 
  
         
